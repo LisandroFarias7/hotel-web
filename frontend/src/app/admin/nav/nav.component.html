@@ -1,0 +1,21 @@
+<nav>
+  <div class="nav__bar">
+    <div class="nav__header">
+      <div class="logo nav__logo">
+        <div>H</div>
+        <span>HOTEL<br />FARIAS</span>
+      </div>
+      <div class="nav__menu__btn" (click)="toggleMenu()">
+        <i  [ngClass]="isMenuOpen ? 'ri-close-line' : 'ri-menu-line'"></i>
+      </div>
+    </div>
+    <ul class="nav__links" [ngClass]="{ 'open': isMenuOpen }">
+        <li><a routerLink="/admin">Home</a></li>
+        <li><a routerLink="/admin/rooms">Habitaciones</a></li>
+        <li><a routerLink="/admin/date">Fechas</a></li>
+        <li><a routerLink="/admin/clients">Clientes</a></li>
+      <li><button (click)="logOut()" class="btn__login"><i class="ri-logout-box-line"></i></button></li>
+    </ul>
+  </div>
+</nav>
+

@@ -1,0 +1,41 @@
+<nav>
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="logo nav__logo">
+          <div>H</div>
+          <span>HOTEL<br />FARIAS</span>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a routerLink="/home">Home</a></li>
+        <li><button routerLink="/login" class="btn__login"><i class="ri-user-3-fill"></i></button></li>
+      </ul>
+    </div>
+  </nav>
+<div class="body">
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Registrar</label>
+                <input type="text" name="txt" placeholder="username" required="" [(ngModel)]="username">
+                <input type="email" name="email" placeholder="Email" required="" [(ngModel)]="email">
+                <input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="password">
+                <button (click)="onRegister()">Registrar</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required="" [(ngModel)]="email">
+                <input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="password">
+                <button (click)="onLogin()">Iniciar Sesion</button>
+            </form>
+        </div>
+    </div>
+</div>

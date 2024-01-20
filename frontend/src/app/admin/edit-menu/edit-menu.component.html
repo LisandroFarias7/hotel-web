@@ -1,0 +1,16 @@
+<app-nav></app-nav>
+
+<div class="body">
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Menu</label>
+                <input type="text" name="title" placeholder="Titulo" required="" [(ngModel)]="menu.title">
+                <input type="text" name="description" placeholder="Descripcion" required="" [(ngModel)]="menu.description">
+                <input type="text" name="imageUrl" placeholder="ImageUrl" required="" [(ngModel)]="menu.imageUrl">
+                <button (click)="updateMenu()">Guardar</button>
+            </form>
+        </div>
+    </div>
+    

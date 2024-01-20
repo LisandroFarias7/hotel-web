@@ -1,0 +1,30 @@
+  
+  <app-nav></app-nav>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<!-- component -->
+<section class="container mx-auto p-6 font-mono mt-10">
+  <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+    <div class="w-full overflow-x-auto">
+      <table class="w-full" >
+        <thead>
+          <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+            <th class="px-4 py-3">Nombre y apellido</th>
+            <th class="px-4 py-3">Email</th>
+            <th class="px-4 py-3">Teléfono</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white" *ngFor="let client of clients">
+          <tr class="text-gray-700">
+            <td class="px-4 py-3 text-sm border">{{client.name}}</td>
+            <td class="px-4 py-3 text-sm border">{{client.email}}</td>
+            <td class="px-4 py-3 text-sm border">{{client.phone}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
+

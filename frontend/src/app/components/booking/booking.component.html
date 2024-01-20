@@ -1,0 +1,24 @@
+<section class="booking" [@slideInOut]>
+    <div class="section__container booking__container">
+      <form [formGroup]="checkForm" (ngSubmit)="createCheck()">
+        <div class="input__group">
+          <label for="arrival">Fecha de Llegada</label>
+          <input type="date" formControlName="checkIn" placeholder="Su Fecha de Llegada">
+        </div>
+        <div class="input__group">
+          <label for="departure">Fecha de Salida</label>
+          <input type="date" formControlName="checkOut" placeholder="Su Fecha de Salida">
+        </div>
+        <div class="input__group">
+          <label for="guests">Huéspedes</label>
+          <input type="number" formControlName="guests" placeholder="Cantidad de Huéspedes">
+        </div>
+        <div class="input__group">
+          <label for="phone">Teléfono</label>
+          <input type="text" formControlName="phone" placeholder="Teléfono">
+        </div>
+        <button type="submit" class="btn">Consultar Disponibilidad</button>
+      </form>
+     
+    </div>
+  </section>

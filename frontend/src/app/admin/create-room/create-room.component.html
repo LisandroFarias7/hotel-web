@@ -1,0 +1,17 @@
+<app-nav></app-nav>
+
+<div class="body">
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form [formGroup]="roomGroup">
+                <label for="chk" aria-hidden="true">Habitación</label>
+                <input type="text" formControlName="title" placeholder="Titulo" >
+                <input type="text" formControlName="description" placeholder="Descripcion">
+                <input type="number" formControlName="price" placeholder="Precio">
+                <input type="text" formControlName="imageUrl" placeholder="ImageUrl">
+                <button (click)="createRoom()">Guardar</button>
+            </form>
+        </div>
+    </div>
+

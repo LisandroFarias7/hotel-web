@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+
+<div class="body">
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Habitación</label>
+                <input type="text" name="title" placeholder="Titulo" required="" [(ngModel)]="title">
+                <input type="text" name="description" placeholder="Descripcion" required="" [(ngModel)]="description">
+                <input type="number" name="price" placeholder="Precio" required="" [(ngModel)]="price">
+                <input type="text" name="imageUrl" placeholder="ImageUrl" required="" [(ngModel)]="imageUrl">
+                <button (click)="updateRoom()">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+
+

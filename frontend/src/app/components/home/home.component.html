@@ -1,0 +1,37 @@
+<nav>
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="logo nav__logo">
+          <div>H</div>
+          <span>HOTEL<br />FARIAS</span>
+        </div>
+        <div class="nav__menu__btn" (click)="toggleMenu()">
+          <i  [ngClass]="isMenuOpen ? 'ri-close-line' : 'ri-menu-line'"></i>
+        </div>
+      </div>
+      <ul class="nav__links" [ngClass]="{ 'open': isMenuOpen }">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#room">Habitación</a></li>
+        <li><a href="#feature">Característica</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><button routerLink="/login" class="btn__login"><i class="ri-user-3-fill"></i></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="header" id="home">
+    <div class="section__container header__container">
+      <p class="section__subheader">SOBRE NOSOTROS</p>
+      <h1>La base perfecta<br />para ti</h1>
+      <button class="btn">Haga un recorrido</button>
+    </div>
+  </header>
+  <app-booking></app-booking>
+  <app-about></app-about>
+  <app-room></app-room>
+  <app-intro></app-intro>
+  <app-feature></app-feature>
+  <app-menu></app-menu>
+  <app-footer></app-footer>
+

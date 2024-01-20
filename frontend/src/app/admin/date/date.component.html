@@ -1,0 +1,31 @@
+  
+  <app-nav></app-nav>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<!-- component -->
+<section class="container mx-auto p-6 font-mono mt-10">
+  <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+    <div class="w-full overflow-x-auto">
+      <table class="w-full" *ngFor="let check of checks">
+        <thead>
+          <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+            <th class="px-4 py-3">Fecha de ingreso</th>
+            <th class="px-4 py-3">Fecha de egreso</th>
+            <th class="px-4 py-3">Huéspedes</th>
+            <th class="px-4 py-3">Teléfono</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+          <tr class="text-gray-700">
+            <td class="px-4 py-3 text-sm border">{{check.checkIn}}</td>
+            <td class="px-4 py-3 text-sm border">{{check.checkOut}}</td>
+            <td class="px-4 py-3 text-sm border">{{check.guests}}</td>
+            <td class="px-4 py-3 text-sm border">{{check.phone}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+

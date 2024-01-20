@@ -1,0 +1,19 @@
+<section class="room__container" id="room" [@fadeInCards]="rooms.length">
+    <p class="section__subheader">HABITACIONES</p>
+    <h2 class="section__header">Habitaciones cuidadosamente seleccionadas</h2>
+    <div class="room__grid">
+      <div class="room__card" *ngFor="let room of rooms">
+        <img src="{{room.imageUrl}}" alt="room" />
+        <div class="room__card__details">
+          <div>
+            <h4>{{room.title}}</h4>
+            <p>{{room.description}}</p>
+            <form [routerLink]="['/payment']" [queryParams]="{ roomId: room.id, roomImg: room.imageUrl, roomTitle: room.title, roomPrice: room.price }">
+              <button class="btn btn-room" type="submit">Reservar Ahora</button>
+            </form>
+            </div>
+            <h3>${{room.price}}<span>/noche</span></h3>
+          </div>
+        </div>
+      </div>
+  </section>

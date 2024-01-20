@@ -1,0 +1,91 @@
+<nav>
+    <div class="nav__bar">
+        <div class="nav__header">
+            <div class="logo nav__logo">
+                <div>H</div>
+                <span>HOTEL<br />FARIAS</span>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a routerLink="/home">Home</a></li>
+            <li><button routerLink="/login" class="btn__login"><i class="ri-user-3-fill"></i></button></li>
+        </ul>
+    </div>
+</nav>
+<div class="body">
+    <div class="card">
+        <form class="payment-form">
+            <h2>Detalles de Pago</h2>
+            <input type="text" placeholder="Nombre en la tarjeta" name="cardName" [(ngModel)]="client.cardName" required>
+            <input type="text" placeholder="Número de tarjeta" name="cardNumber" [(ngModel)]="client.cardNumber" required>
+            <input type="text" placeholder="Fecha de expiración" name="dateCard" [(ngModel)]="client.dateCard" required>
+            <input type="number" placeholder="CVV" name="cardCode" [(ngModel)]="client.cardCode" >
+                <div class="card-payment">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+                            <div class="row">
+                                <img src="https://i.ibb.co/G9pDnYJ/chip.png" width="30px" class="img1">
+                                <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="30px" class="img2">
+                            </div>
+                            <div class="row card-no">
+                                <p>{{ this.client.cardNumber }}</p>
+                            </div>
+                            <div class="row card-holder">
+                                <p>NOMBRE COMPLETO</p>
+                                <p>FECHA CADUCIDAD</p>
+                            </div>
+                            <div class="row name">
+                                <p>{{ this.client.cardName }}</p>
+                                <p>{{ this.client.dateCard }}</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+                            <div class="bar"></div>
+                            <div class="row card-cvv">
+                                <div>
+                                    <img src="https://i.ibb.co/S6JG8px/pattern.png">
+                                </div>
+                                <p>{{ this.client.cardCode }}</p>
+                            </div>
+                            <div class="row signature">
+                                <p>SUCCESSFULLY</p>
+                                <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="80px" class="img2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <h2>Información Personal</h2>
+            <input type="text" placeholder="Nombre completo" name="name" [(ngModel)]="client.name" required>
+            <input type="email" placeholder="Correo electrónico" name="email" [(ngModel)]="client.email" required>
+            <input type="text" placeholder="Teléfono" name="phone" [(ngModel)]="client.phone" required>
+
+        </form>
+    </div>
+    <div class="room__container">
+        <div class="room__grid">
+            <div class="room__card">
+                <img src="{{ roomImage }}" alt="room" />
+                <div class="room__card__details">
+                    <div>
+                        <h4>{{ roomTitle }}</h4>
+                    </div>
+                    <h3>${{ roomPrice }}<span>/noche</span></h3>
+                    <h3>Total: ${{ total }}</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-form">
+            <input type="number" placeholder="Noches " name="" [(ngModel)]="roomNigth" required>
+            <button class="btn" (click)="calcTotal()">Calcular Total</button>
+            <button type="button" (click)="clientData()" class="btn">Pagar</button>
+        </div>   
+    </div>
+</div>
+<app-footer></app-footer>

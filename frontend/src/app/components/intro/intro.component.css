@@ -1,0 +1,45 @@
+.intro {
+    position: relative;
+    isolation: isolate;
+    background-color: var(--primary-color);
+  }
+  
+  .intro::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    height: 100%;
+    width: calc(100vw / 4);
+    background-color: var(--secondary-color);
+    z-index: -1;
+  }
+  
+  .intro__container {
+    display: grid;
+    gap: 4rem 2rem;
+  }
+  
+  .intro__container .section__subheader {
+    color: var(--secondary-color);
+  }
+  
+  .intro__container :is(.section__header, .section__description) {
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+  
+  .intro__video {
+    max-width: 450px;
+    margin: auto;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (width > 768px) {
+
+  .intro__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+}
+

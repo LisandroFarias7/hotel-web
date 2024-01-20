@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+
+<section class="room__container" id="room">
+  <p class="section__subheader">HABITACIONES</p>
+  <h2 class="section__header">Habitaciones cuidadosamente seleccionadas</h2>
+  <div class="room__grid">
+    <div class="room__card" *ngFor="let room of rooms">
+      <img src="{{room.imageUrl}}" alt="room" />
+      <div class="room__card__details">
+        <div>
+          <h4>{{room.title}}</h4>
+          <p>
+            {{room.description}}
+          </p>
+          <button class="btn delete" (click)="deleteRoom(room.id)">ELIMINAR</button>
+          <button class="btn edit" [routerLink]="['/admin/rooms/edit', room.id]">EDITAR</button>
+        </div>
+        <h3>${{room.price}}<span>/noche</span></h3>
+      </div>
+    </div>
+  </div>
+  <div class="room__add">
+    <button class="btn" routerLink="/admin/rooms/create">CREAR</button>
+  </div>
+</section>

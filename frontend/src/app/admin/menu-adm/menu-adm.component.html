@@ -1,0 +1,35 @@
+<app-nav></app-nav>
+
+<section class="menu" id="menu">
+  <div class="section__container menu__container">
+    <div class="menu__header">
+      <div>
+        <p class="section__subheader">MENU</p>
+        <h2 class="section__header">Nuestro menú de comidas</h2>
+      </div>
+      <div class="section__nav">
+        <span><i class="ri-arrow-left-line"></i></span>
+        <span><i class="ri-arrow-right-line"></i></span>
+      </div>
+    </div>
+    <ul class="menu__items" *ngFor="let menuI of menu">
+      <li>
+        <img src="{{menuI.imageUrl}}" alt="menu" />
+        <div class="menu__details">
+          <h4>{{menuI.title}}</h4>
+          <p>
+            {{menuI.description}}
+          </p>
+        </div>
+        <div class="modify">
+          <div class="delete">
+            <button class="btn" (click)="deleteMenu(menuI.id)">ELIMINAR</button>
+          </div>
+          <button class="btn edit" [routerLink]="['/admin/menu/edit', menuI.id]">EDITAR</button>
+        </div>
+      </li>
+    </ul>
+    <input type="button" value="CREAR" class="btn" routerLink="/admin/menu/edit">
+  </div>
+</section>
+
